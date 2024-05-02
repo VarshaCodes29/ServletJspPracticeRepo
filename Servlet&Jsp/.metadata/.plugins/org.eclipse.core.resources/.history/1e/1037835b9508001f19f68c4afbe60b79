@@ -1,0 +1,25 @@
+package in.vp.backend;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class Login extends HttpServlet{
+	
+	protected void service(HttpServletRequest req,HttpServletResponse res) throws IOException
+	{
+		String name = req.getParameter("search1");
+		
+		res.sendRedirect("https://www.google.com/search?q="+name);
+		
+		
+			
+	}
+
+
+}
+ {
+
+}
