@@ -1,0 +1,18 @@
+package in.vp.jdbc;
+
+public class JdbcInsert {
+    public static void main(String[] args) {
+        try {
+            // Dynamically load the MySQL JDBC driver class
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            
+            // Print a message indicating successful loading of the driver class
+            System.out.println("MySQL JDBC driver loaded successfully.");
+            
+        } catch (ClassNotFoundException e) {
+            // Handle ClassNotFoundException if the driver class is not found
+            System.err.println("Error: MySQL JDBC driver not found.");
+            e.printStackTrace();
+        }
+    }
+}

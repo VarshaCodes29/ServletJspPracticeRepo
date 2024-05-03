@@ -1,0 +1,31 @@
+package in.vp.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class Delete {
+	public static void main(String[] args) throws ClassNotFoundException, SQLException
+	{
+		String email="raj@gmail.com";
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc_db","root","root");
+		
+		PreparedStatement ps = con.prepareStatement("delete from register where email=?");
+		ps.setString(1,email);
+		
+		int i = ps.executeUpdate();
+		
+		if(i>0)
+		{
+			System.out.println("item deleted");
+		}
+		else {
+			System.out.println("not deleted");
+		}
+		con.close();
+			
+	}
+
+}

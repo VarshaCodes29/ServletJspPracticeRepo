@@ -1,0 +1,10 @@
+package in.vp.jdbc;
+
+public class JdbcInsert {
+	public static void main(String[] args) throws ClassNotFoundException
+	{
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		System.out.println("hey this is jdbc");
+	}
+
+}
